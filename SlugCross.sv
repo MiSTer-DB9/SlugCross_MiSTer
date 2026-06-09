@@ -297,7 +297,7 @@ wire [127:0] status;
 // [MiSTer-DB9 END]
 // [MiSTer-DB9 BEGIN] - DB9/SNAC8 support: USB-side joystick renamed + joydb mux
 wire [15:0] joyA_USB;
-wire [15:0] joyA = joydb_1ena ? (OSD_STATUS ? 16'b0 : joydb_1) : joyA_USB;
+wire [15:0] joyA = joydb_1ena ? (OSD_STATUS ? 16'b0 : joydb_1_mapped[15:0]) : joyA_USB;
 // [MiSTer-DB9 END]
 
 
